@@ -7,7 +7,7 @@ import android.webkit.WebViewClient;
 
 public class SecondActivity extends AppCompatActivity {
 
-    String webUrl = "file:///android_asset/yahooUrl.html";
+    //String webUrl = "file:///android_asset/my.html";
     WebView webView;
 
     @Override
@@ -17,13 +17,11 @@ public class SecondActivity extends AppCompatActivity {
 
         this.webView =  findViewById(R.id.webView);
 
-        //webView.loadUrl("http://www.google.com");
-
-        this.webView.loadUrl(webUrl);
+        webView.loadUrl("http://10.0.2.2:8080/");
+       // this.webView.loadUrl(webUrl);
 
         this.webView.getSettings().setJavaScriptEnabled(true);
         this.webView.setWebViewClient(new WebViewClient());
-
     }
 
     @Override
